@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D603B2029216D39000ECCEF /* bandmate_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D603B1F29216D39000ECCEF /* bandmate_iosApp.swift */; };
+		3D603B2229216D39000ECCEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D603B2129216D39000ECCEF /* ContentView.swift */; };
+		3D603B2429216D3A000ECCEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D603B2329216D3A000ECCEF /* Assets.xcassets */; };
+		3D603B2729216D3A000ECCEF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D603B2629216D3A000ECCEF /* Preview Assets.xcassets */; };
+		3D603B2929216D3A000ECCEF /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D603B2829216D3A000ECCEF /* Persistence.swift */; };
+		3D603B2C29216D3A000ECCEF /* bandmate_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D603B2A29216D3A000ECCEF /* bandmate_ios.xcdatamodeld */; };
+		3D603B3629216D3A000ECCEF /* bandmate_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D603B3529216D3A000ECCEF /* bandmate_iosTests.swift */; };
+		3D603B4029216D3A000ECCEF /* bandmate_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D603B3F29216D3A000ECCEF /* bandmate_iosUITests.swift */; };
+		3D603B4229216D3A000ECCEF /* bandmate_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D603B4129216D3A000ECCEF /* bandmate_iosUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D603B3229216D3A000ECCEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D603B1429216D39000ECCEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D603B1B29216D39000ECCEF;
+			remoteInfo = "bandmate-ios";
+		};
+		3D603B3C29216D3A000ECCEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D603B1429216D39000ECCEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D603B1B29216D39000ECCEF;
+			remoteInfo = "bandmate-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3D603B1C29216D39000ECCEF /* bandmate-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bandmate-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D603B1F29216D39000ECCEF /* bandmate_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bandmate_iosApp.swift; sourceTree = "<group>"; };
+		3D603B2129216D39000ECCEF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3D603B2329216D3A000ECCEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D603B2629216D3A000ECCEF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3D603B2829216D3A000ECCEF /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		3D603B2B29216D3A000ECCEF /* bandmate_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = bandmate_ios.xcdatamodel; sourceTree = "<group>"; };
+		3D603B3129216D3A000ECCEF /* bandmate-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bandmate-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D603B3529216D3A000ECCEF /* bandmate_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bandmate_iosTests.swift; sourceTree = "<group>"; };
+		3D603B3B29216D3A000ECCEF /* bandmate-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bandmate-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D603B3F29216D3A000ECCEF /* bandmate_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bandmate_iosUITests.swift; sourceTree = "<group>"; };
+		3D603B4129216D3A000ECCEF /* bandmate_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bandmate_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D603B1929216D39000ECCEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D603B2E29216D3A000ECCEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D603B3829216D3A000ECCEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D603B1329216D39000ECCEF = {
+			isa = PBXGroup;
+			children = (
+				3D603B1E29216D39000ECCEF /* bandmate-ios */,
+				3D603B3429216D3A000ECCEF /* bandmate-iosTests */,
+				3D603B3E29216D3A000ECCEF /* bandmate-iosUITests */,
+				3D603B1D29216D39000ECCEF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3D603B1D29216D39000ECCEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D603B1C29216D39000ECCEF /* bandmate-ios.app */,
+				3D603B3129216D3A000ECCEF /* bandmate-iosTests.xctest */,
+				3D603B3B29216D3A000ECCEF /* bandmate-iosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D603B1E29216D39000ECCEF /* bandmate-ios */ = {
+			isa = PBXGroup;
+			children = (
+				3D603B1F29216D39000ECCEF /* bandmate_iosApp.swift */,
+				3D603B2129216D39000ECCEF /* ContentView.swift */,
+				3D603B2329216D3A000ECCEF /* Assets.xcassets */,
+				3D603B2829216D3A000ECCEF /* Persistence.swift */,
+				3D603B2A29216D3A000ECCEF /* bandmate_ios.xcdatamodeld */,
+				3D603B2529216D3A000ECCEF /* Preview Content */,
+			);
+			path = "bandmate-ios";
+			sourceTree = "<group>";
+		};
+		3D603B2529216D3A000ECCEF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3D603B2629216D3A000ECCEF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3D603B3429216D3A000ECCEF /* bandmate-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D603B3529216D3A000ECCEF /* bandmate_iosTests.swift */,
+			);
+			path = "bandmate-iosTests";
+			sourceTree = "<group>";
+		};
+		3D603B3E29216D3A000ECCEF /* bandmate-iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3D603B3F29216D3A000ECCEF /* bandmate_iosUITests.swift */,
+				3D603B4129216D3A000ECCEF /* bandmate_iosUITestsLaunchTests.swift */,
+			);
+			path = "bandmate-iosUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D603B1B29216D39000ECCEF /* bandmate-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D603B4529216D3A000ECCEF /* Build configuration list for PBXNativeTarget "bandmate-ios" */;
+			buildPhases = (
+				3D603B1829216D39000ECCEF /* Sources */,
+				3D603B1929216D39000ECCEF /* Frameworks */,
+				3D603B1A29216D39000ECCEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "bandmate-ios";
+			productName = "bandmate-ios";
+			productReference = 3D603B1C29216D39000ECCEF /* bandmate-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3D603B3029216D3A000ECCEF /* bandmate-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D603B4829216D3A000ECCEF /* Build configuration list for PBXNativeTarget "bandmate-iosTests" */;
+			buildPhases = (
+				3D603B2D29216D3A000ECCEF /* Sources */,
+				3D603B2E29216D3A000ECCEF /* Frameworks */,
+				3D603B2F29216D3A000ECCEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D603B3329216D3A000ECCEF /* PBXTargetDependency */,
+			);
+			name = "bandmate-iosTests";
+			productName = "bandmate-iosTests";
+			productReference = 3D603B3129216D3A000ECCEF /* bandmate-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3D603B3A29216D3A000ECCEF /* bandmate-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D603B4B29216D3A000ECCEF /* Build configuration list for PBXNativeTarget "bandmate-iosUITests" */;
+			buildPhases = (
+				3D603B3729216D3A000ECCEF /* Sources */,
+				3D603B3829216D3A000ECCEF /* Frameworks */,
+				3D603B3929216D3A000ECCEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D603B3D29216D3A000ECCEF /* PBXTargetDependency */,
+			);
+			name = "bandmate-iosUITests";
+			productName = "bandmate-iosUITests";
+			productReference = 3D603B3B29216D3A000ECCEF /* bandmate-iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D603B1429216D39000ECCEF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					3D603B1B29216D39000ECCEF = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					3D603B3029216D3A000ECCEF = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 3D603B1B29216D39000ECCEF;
+					};
+					3D603B3A29216D3A000ECCEF = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 3D603B1B29216D39000ECCEF;
+					};
+				};
+			};
+			buildConfigurationList = 3D603B1729216D39000ECCEF /* Build configuration list for PBXProject "bandmate-ios" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D603B1329216D39000ECCEF;
+			productRefGroup = 3D603B1D29216D39000ECCEF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D603B1B29216D39000ECCEF /* bandmate-ios */,
+				3D603B3029216D3A000ECCEF /* bandmate-iosTests */,
+				3D603B3A29216D3A000ECCEF /* bandmate-iosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D603B1A29216D39000ECCEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D603B2729216D3A000ECCEF /* Preview Assets.xcassets in Resources */,
+				3D603B2429216D3A000ECCEF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D603B2F29216D3A000ECCEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D603B3929216D3A000ECCEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D603B1829216D39000ECCEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D603B2929216D3A000ECCEF /* Persistence.swift in Sources */,
+				3D603B2229216D39000ECCEF /* ContentView.swift in Sources */,
+				3D603B2029216D39000ECCEF /* bandmate_iosApp.swift in Sources */,
+				3D603B2C29216D3A000ECCEF /* bandmate_ios.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D603B2D29216D3A000ECCEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D603B3629216D3A000ECCEF /* bandmate_iosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D603B3729216D3A000ECCEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D603B4229216D3A000ECCEF /* bandmate_iosUITestsLaunchTests.swift in Sources */,
+				3D603B4029216D3A000ECCEF /* bandmate_iosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D603B3329216D3A000ECCEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D603B1B29216D39000ECCEF /* bandmate-ios */;
+			targetProxy = 3D603B3229216D3A000ECCEF /* PBXContainerItemProxy */;
+		};
+		3D603B3D29216D3A000ECCEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D603B1B29216D39000ECCEF /* bandmate-ios */;
+			targetProxy = 3D603B3C29216D3A000ECCEF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3D603B4329216D3A000ECCEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3D603B4429216D3A000ECCEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D603B4629216D3A000ECCEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"bandmate-ios/Preview Content\"";
+				DEVELOPMENT_TEAM = 74X46VET5K;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.karstenkrause.bandmate-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3D603B4729216D3A000ECCEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"bandmate-ios/Preview Content\"";
+				DEVELOPMENT_TEAM = 74X46VET5K;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.karstenkrause.bandmate-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3D603B4929216D3A000ECCEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 74X46VET5K;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.karstenkrause.bandmate-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bandmate-ios.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/bandmate-ios";
+			};
+			name = Debug;
+		};
+		3D603B4A29216D3A000ECCEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 74X46VET5K;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.karstenkrause.bandmate-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bandmate-ios.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/bandmate-ios";
+			};
+			name = Release;
+		};
+		3D603B4C29216D3A000ECCEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 74X46VET5K;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.karstenkrause.bandmate-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "bandmate-ios";
+			};
+			name = Debug;
+		};
+		3D603B4D29216D3A000ECCEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 74X46VET5K;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.karstenkrause.bandmate-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "bandmate-ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D603B1729216D39000ECCEF /* Build configuration list for PBXProject "bandmate-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D603B4329216D3A000ECCEF /* Debug */,
+				3D603B4429216D3A000ECCEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D603B4529216D3A000ECCEF /* Build configuration list for PBXNativeTarget "bandmate-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D603B4629216D3A000ECCEF /* Debug */,
+				3D603B4729216D3A000ECCEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D603B4829216D3A000ECCEF /* Build configuration list for PBXNativeTarget "bandmate-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D603B4929216D3A000ECCEF /* Debug */,
+				3D603B4A29216D3A000ECCEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D603B4B29216D3A000ECCEF /* Build configuration list for PBXNativeTarget "bandmate-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D603B4C29216D3A000ECCEF /* Debug */,
+				3D603B4D29216D3A000ECCEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3D603B2A29216D3A000ECCEF /* bandmate_ios.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3D603B2B29216D3A000ECCEF /* bandmate_ios.xcdatamodel */,
+			);
+			currentVersion = 3D603B2B29216D3A000ECCEF /* bandmate_ios.xcdatamodel */;
+			path = bandmate_ios.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3D603B1429216D39000ECCEF /* Project object */;
+}
