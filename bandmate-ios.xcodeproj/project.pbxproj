@@ -16,6 +16,7 @@
 		3D603B3629216D3A000ECCEF /* bandmate_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D603B3529216D3A000ECCEF /* bandmate_iosTests.swift */; };
 		3D603B4029216D3A000ECCEF /* bandmate_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D603B3F29216D3A000ECCEF /* bandmate_iosUITests.swift */; };
 		3D603B4229216D3A000ECCEF /* bandmate_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D603B4129216D3A000ECCEF /* bandmate_iosUITestsLaunchTests.swift */; };
+		3DA84E7829222DB9000DAB9C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3DA84E7729222DB9000DAB9C /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		3D603B3B29216D3A000ECCEF /* bandmate-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bandmate-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D603B3F29216D3A000ECCEF /* bandmate_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bandmate_iosUITests.swift; sourceTree = "<group>"; };
 		3D603B4129216D3A000ECCEF /* bandmate_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bandmate_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3DA84E7729222DB9000DAB9C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,9 +77,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D2D4C1E292229EA006498C7 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		3D2D4C1F292229FB006498C7 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		3D2D4C2029222A0E006498C7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		3D2D4C2129222A91006498C7 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
 		3D603B1329216D39000ECCEF = {
 			isa = PBXGroup;
 			children = (
+				3DA84E7729222DB9000DAB9C /* README.md */,
 				3D603B1E29216D39000ECCEF /* bandmate-ios */,
 				3D603B3429216D3A000ECCEF /* bandmate-iosTests */,
 				3D603B3E29216D3A000ECCEF /* bandmate-iosUITests */,
@@ -98,6 +129,10 @@
 		3D603B1E29216D39000ECCEF /* bandmate-ios */ = {
 			isa = PBXGroup;
 			children = (
+				3D2D4C1E292229EA006498C7 /* Settings */,
+				3D2D4C2029222A0E006498C7 /* Base */,
+				3D2D4C1F292229FB006498C7 /* Features */,
+				3D2D4C2129222A91006498C7 /* Ressources */,
 				3D603B1F29216D39000ECCEF /* bandmate_iosApp.swift */,
 				3D603B2129216D39000ECCEF /* ContentView.swift */,
 				3D603B2329216D3A000ECCEF /* Assets.xcassets */,
@@ -237,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DA84E7829222DB9000DAB9C /* README.md in Resources */,
 				3D603B2729216D3A000ECCEF /* Preview Assets.xcassets in Resources */,
 				3D603B2429216D3A000ECCEF /* Assets.xcassets in Resources */,
 			);

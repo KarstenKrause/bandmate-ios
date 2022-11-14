@@ -7,6 +7,8 @@
 
 import CoreData
 
+
+/// Sample of an CoreData Persistence Controller
 struct PersistenceController {
     static let shared = PersistenceController()
 
