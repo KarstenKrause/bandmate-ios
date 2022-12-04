@@ -13,8 +13,10 @@ struct bandmate_iosApp: App {
 
     var body: some Scene {
         WindowGroup {
+            let authVM = AuthenticationViewModel()
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(authVM)
         }
     }
 }

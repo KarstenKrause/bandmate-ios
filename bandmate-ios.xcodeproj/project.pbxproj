@@ -17,6 +17,11 @@
 		3D603B4029216D3A000ECCEF /* bandmate_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D603B3F29216D3A000ECCEF /* bandmate_iosUITests.swift */; };
 		3D603B4229216D3A000ECCEF /* bandmate_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D603B4129216D3A000ECCEF /* bandmate_iosUITestsLaunchTests.swift */; };
 		3DA84E7829222DB9000DAB9C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3DA84E7729222DB9000DAB9C /* README.md */; };
+		3DA84E7E29225CDF000DAB9C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA84E7D29225CDF000DAB9C /* LoginView.swift */; };
+		3DA84E8129225E29000DAB9C /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA84E8029225E29000DAB9C /* AuthenticationViewModel.swift */; };
+		3DE82A9F29256166000615F0 /* IconTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE82A9E29256166000615F0 /* IconTextField.swift */; };
+		3DE82AA1292562B1000615F0 /* IconSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE82AA0292562B1000615F0 /* IconSecureField.swift */; };
+		3DE82AA3293C57B4000615F0 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE82AA2293C57B4000615F0 /* RegistrationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +55,11 @@
 		3D603B3F29216D3A000ECCEF /* bandmate_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bandmate_iosUITests.swift; sourceTree = "<group>"; };
 		3D603B4129216D3A000ECCEF /* bandmate_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bandmate_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3DA84E7729222DB9000DAB9C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3DA84E7D29225CDF000DAB9C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		3DA84E8029225E29000DAB9C /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		3DE82A9E29256166000615F0 /* IconTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTextField.swift; sourceTree = "<group>"; };
+		3DE82AA0292562B1000615F0 /* IconSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconSecureField.swift; sourceTree = "<group>"; };
+		3DE82AA2293C57B4000615F0 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +97,7 @@
 		3D2D4C1F292229FB006498C7 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				3DA84E7929225BFA000DAB9C /* Authentication */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -166,6 +177,50 @@
 				3D603B4129216D3A000ECCEF /* bandmate_iosUITestsLaunchTests.swift */,
 			);
 			path = "bandmate-iosUITests";
+			sourceTree = "<group>";
+		};
+		3DA84E7929225BFA000DAB9C /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				3DA84E7F29225CEA000DAB9C /* Components */,
+				3DA84E7A29225C67000DAB9C /* Models */,
+				3DA84E7B29225C79000DAB9C /* Views */,
+				3DA84E7C29225C83000DAB9C /* ViewModels */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		3DA84E7A29225C67000DAB9C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3DA84E7B29225C79000DAB9C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3DA84E7D29225CDF000DAB9C /* LoginView.swift */,
+				3DE82AA2293C57B4000615F0 /* RegistrationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3DA84E7C29225C83000DAB9C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3DA84E8029225E29000DAB9C /* AuthenticationViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3DA84E7F29225CEA000DAB9C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3DE82A9E29256166000615F0 /* IconTextField.swift */,
+				3DE82AA0292562B1000615F0 /* IconSecureField.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,9 +354,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DA84E8129225E29000DAB9C /* AuthenticationViewModel.swift in Sources */,
 				3D603B2929216D3A000ECCEF /* Persistence.swift in Sources */,
+				3DE82A9F29256166000615F0 /* IconTextField.swift in Sources */,
+				3DE82AA3293C57B4000615F0 /* RegistrationView.swift in Sources */,
 				3D603B2229216D39000ECCEF /* ContentView.swift in Sources */,
 				3D603B2029216D39000ECCEF /* bandmate_iosApp.swift in Sources */,
+				3DA84E7E29225CDF000DAB9C /* LoginView.swift in Sources */,
+				3DE82AA1292562B1000615F0 /* IconSecureField.swift in Sources */,
 				3D603B2C29216D3A000ECCEF /* bandmate_ios.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
