@@ -9,11 +9,14 @@ import SwiftUI
 
 struct RegistrationView: View {
     @EnvironmentObject var authVM: AuthenticationViewModel
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         GeometryReader { geo in
             NavigationView {
                 ScrollView {
+                    
+                    // MARK: - Header
                     VStack {
                         Text("Bandmate")
                             .font(.title)
@@ -29,20 +32,22 @@ struct RegistrationView: View {
                     .background(Color.blue)
                     .ignoresSafeArea()
                     
+                    // MARK: Body
                     VStack(alignment: .leading) {
+                        
                         IconTextField(icon: "person.fill", placeHolder: "Benutzername", text: $authVM.username)
                         //Text("gh").foregroundColor(.red).font(.system(size: 12)).padding(.leading, 20)
                         
                         IconTextField(icon: "envelope.fill", placeHolder: "Email", text: $authVM.email)
-                            .padding(.top, 20)
+                            .padding(.top, 15)
                         //Text("dfwe").foregroundColor(.red).font(.system(size: 12)).padding(.leading, 20)
                         
                         IconSecureField(icon: "lock.fill", placeHolder: "Passwort", text: $authVM.password)
-                            .padding(.top, 20)
+                            .padding(.top, 15)
                         //Text("dfwe").foregroundColor(.red).font(.system(size: 12)).padding(.leading, 20)
                         
                         IconSecureField(icon: "lock.fill", placeHolder: "Passwort bestätigen", text: $authVM.password)
-                            .padding(.top, 20)
+                            .padding(.top, 15)
                         //Text("dfwe").foregroundColor(.red).font(.system(size: 12)).padding(.leading, 20)
                         
                         Button {
@@ -56,12 +61,39 @@ struct RegistrationView: View {
                                 .cornerRadius(25)
                                 .foregroundColor(.white)
                         }
-                        .padding(.top, 24)
+                        .padding(.top, 30)
+                        
+                        
                     }
-                    .padding(38)
+                    .padding(.leading, 38)
+                    .padding(.trailing, 38)
+                    .padding(.top, 38)
+                    
+                    
+                    // MARK: - Footer
+                    VStack {
+                        HStack {
+                            Text("Du hast schon ein Account?")
+                            .font(.footnote)
+                            Button {
+                                presentationMode.wrappedValue.dismiss()
+                            } label: {
+                                Text("Anmelden")
+                                    .font(.footnote)
+                                    .foregroundColor(Color.blue)
+                            }
+                            
+                        }
+                    }
+                    .padding(10)
                 }
+                .frame(minHeight: geo.size.height)
                 .ignoresSafeArea()
+                .onTapGesture {
+                    hideKeyboard()
+                }
             }
+            .navigationBarHidden(true)
         }
     }
 }

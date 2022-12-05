@@ -18,9 +18,9 @@ struct IconSecureField: View {
             SecureField(self.placeHolder, text: $text)
         }
         .padding()
-        .background(Color.white)
+        .background(Color("CustomPrimary"))
         .mask(RoundedRectangle(cornerRadius: 25, style: .continuous)).frame(height: 40)
-        .overlay(RoundedRectangle(cornerRadius: 25, style: .continuous).stroke().fill(.black.opacity(0.1))).frame(height: 40)
+        .overlay(RoundedRectangle(cornerRadius: 25, style: .continuous).stroke().fill(.gray.opacity(0.4))).frame(height: 40)
     }
 }
 

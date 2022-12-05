@@ -54,15 +54,12 @@ struct LoginView: View {
                             .foregroundColor(.red)
                             .font(.system(size: 12))
                         
-                        Spacer()
-                        
-                        
-                        
                     }
                     .padding(38)
                     
                     // MARK: - Footer
                     VStack {
+                        
                         HStack {
                             VStack {
                                 Divider()
@@ -77,8 +74,9 @@ struct LoginView: View {
                         Text("Registrieren mit Email, Apple oder Google").font(.system(size:12)).foregroundColor(.gray)
                         HStack {
                             
-                            Button {
-                                print("to SignupView")
+                            
+                            NavigationLink {
+                                RegistrationView()
                             } label: {
                                 Image(systemName: "envelope")
                                     .resizable()
@@ -116,8 +114,15 @@ struct LoginView: View {
                     .padding(.leading, 38)
                     .padding(.trailing, 38)
                     
+                    
+                    
                 }
+                .frame(minHeight: geo.size.height)
                 .ignoresSafeArea()
+                .onTapGesture {
+                    hideKeyboard()
+                }
+                
             }
         }
     }
@@ -129,3 +134,12 @@ struct LoginView_Previews: PreviewProvider {
         LoginView().environmentObject(previewAuthVM)
     }
 }
+
+
+#if canImport(UIKit)
+extension View {
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+#endif
