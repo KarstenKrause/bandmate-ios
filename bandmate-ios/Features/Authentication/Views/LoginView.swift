@@ -13,7 +13,7 @@ struct LoginView: View {
     var body: some View {
         GeometryReader { geo in
             NavigationView {
-                ScrollView {
+                VStack {
                     
                     // MARK: - Header
                     VStack {
@@ -34,7 +34,6 @@ struct LoginView: View {
                     // MARK: - Body
                     VStack(spacing: 24) {
                         
-                        
                         IconTextField(icon: "envelope.fill", placeHolder: "Email", text: $authVM.email)
                         IconSecureField(icon: "lock.fill", placeHolder: "Passwort", text: $authVM.password)
                         
@@ -44,7 +43,7 @@ struct LoginView: View {
                         } label: {
                             Text("Anmelden")
                                 .frame(minWidth: 0, maxWidth: .infinity)
-                                .frame(height: 40)
+                                .frame(height: 50)
                                 .background(Color(.blue))
                                 .cornerRadius(25)
                                 .foregroundColor(.white)
@@ -56,6 +55,7 @@ struct LoginView: View {
                         
                     }
                     .padding(38)
+                    Spacer()
                     
                     // MARK: - Footer
                     VStack {
@@ -66,15 +66,15 @@ struct LoginView: View {
                             }
                             
                             Text("ODER").foregroundColor(.gray).font(.system(size:12))
+                            
                             VStack {
                                 Divider()
                             }
                         }
                         
-                        Text("Registrieren mit Email, Apple oder Google").font(.system(size:12)).foregroundColor(.gray)
+                        Text("Registrieren mit Email, Apple oder Google").font(.system(size:12)).foregroundColor(.gray).padding(.bottom, 10)
+                        
                         HStack {
-                            
-                            
                             NavigationLink {
                                 RegistrationView()
                             } label: {
@@ -106,15 +106,9 @@ struct LoginView: View {
                                     .frame(width: 32.0, height: 32.0)
                                     .foregroundColor(Color(.gray))
                             }
-
                         }
-                        
-                        
                     }
-                    .padding(.leading, 38)
-                    .padding(.trailing, 38)
-                    
-                    
+                    .padding(38)
                     
                 }
                 .frame(minHeight: geo.size.height)

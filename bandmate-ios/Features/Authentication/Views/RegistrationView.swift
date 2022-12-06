@@ -14,41 +14,25 @@ struct RegistrationView: View {
     var body: some View {
         GeometryReader { geo in
             NavigationView {
-                ScrollView {
-                    
-                    // MARK: - Header
-                    VStack {
-                        Text("Bandmate")
-                            .font(.title)
-                            .bold()
-                            .padding()
-                            .foregroundColor(.white)
-                        Text("Vernetze dich mit Bands und Musikern aus deiner Umgebung.")
-                            .font(.system(size:14))
-                            .multilineTextAlignment(.center)
-                            .foregroundColor(.white)
-                    }
-                    .frame(width: geo.size.width, height: geo.size.height / 3)
-                    .background(Color.blue)
-                    .ignoresSafeArea()
-                    
+                VStack {
+                    Text("Neues Konto erstellen").font(.title)
                     // MARK: Body
                     VStack(alignment: .leading) {
                         
                         IconTextField(icon: "person.fill", placeHolder: "Benutzername", text: $authVM.username)
-                        //Text("gh").foregroundColor(.red).font(.system(size: 12)).padding(.leading, 20)
+                        Text(authVM.usernamePrompt).foregroundColor(.red).font(.system(size: 12)).padding(.leading, 20)
                         
                         IconTextField(icon: "envelope.fill", placeHolder: "Email", text: $authVM.email)
                             .padding(.top, 15)
-                        //Text("dfwe").foregroundColor(.red).font(.system(size: 12)).padding(.leading, 20)
+                        Text(authVM.emailPrompt).foregroundColor(.red).font(.system(size: 12)).padding(.leading, 20)
                         
                         IconSecureField(icon: "lock.fill", placeHolder: "Passwort", text: $authVM.password)
                             .padding(.top, 15)
-                        //Text("dfwe").foregroundColor(.red).font(.system(size: 12)).padding(.leading, 20)
+                        Text(authVM.passwordPrompt).foregroundColor(.red).font(.system(size: 12)).padding(.leading, 20)
                         
-                        IconSecureField(icon: "lock.fill", placeHolder: "Passwort bestätigen", text: $authVM.password)
+                        IconSecureField(icon: "lock.fill", placeHolder: "Passwort bestätigen", text: $authVM.confirmPassword)
                             .padding(.top, 15)
-                        //Text("dfwe").foregroundColor(.red).font(.system(size: 12)).padding(.leading, 20)
+                        Text(authVM.confirmPasswordPrompt).foregroundColor(.red).font(.system(size: 12)).padding(.leading, 20)
                         
                         Button {
                             //TODO: implementation of the registration logic
@@ -56,7 +40,7 @@ struct RegistrationView: View {
                         } label: {
                             Text("Registrieren")
                                 .frame(minWidth: 0, maxWidth: .infinity)
-                                .frame(height: 40)
+                                .frame(height: 50)
                                 .background(Color(.blue))
                                 .cornerRadius(25)
                                 .foregroundColor(.white)
@@ -87,8 +71,6 @@ struct RegistrationView: View {
                     }
                     .padding(10)
                 }
-                .frame(minHeight: geo.size.height)
-                .ignoresSafeArea()
                 .onTapGesture {
                     hideKeyboard()
                 }
