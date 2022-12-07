@@ -31,7 +31,7 @@ struct LoginView: View {
                     .background(Color.blue)
                     .ignoresSafeArea()
                     
-                    // MARK: - Body
+                    // MARK: - Inputs
                     VStack(spacing: 24) {
                         
                         IconTextField(icon: "envelope.fill", placeHolder: "Email", text: $authVM.email)
@@ -48,6 +48,8 @@ struct LoginView: View {
                                 .cornerRadius(25)
                                 .foregroundColor(.white)
                         }
+                        .opacity(authVM.loginInputsFilled ? 1.0 : 0.6)
+                        .disabled(!authVM.loginInputsFilled)
                         
                         Text(authVM.errorMessage)
                             .foregroundColor(.red)
@@ -57,7 +59,7 @@ struct LoginView: View {
                     .padding(38)
                     Spacer()
                     
-                    // MARK: - Footer
+                    // MARK: - Reg Buttons
                     VStack {
                         
                         HStack {
@@ -112,12 +114,11 @@ struct LoginView: View {
                     
                 }
                 .frame(minHeight: geo.size.height)
-                .ignoresSafeArea()
-                .onTapGesture {
-                    hideKeyboard()
-                }
-                
+                .ignoresSafeArea() 
             }
+        }
+        .onTapGesture {
+            hideKeyboard()
         }
     }
 }
@@ -128,12 +129,3 @@ struct LoginView_Previews: PreviewProvider {
         LoginView().environmentObject(previewAuthVM)
     }
 }
-
-
-#if canImport(UIKit)
-extension View {
-    func hideKeyboard() {
-        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-    }
-}
-#endif

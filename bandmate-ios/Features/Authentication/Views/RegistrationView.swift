@@ -16,24 +16,26 @@ struct RegistrationView: View {
             NavigationView {
                 VStack {
                     Text("Neues Konto erstellen").font(.title)
-                    // MARK: Body
+                    // MARK: Inputs
                     VStack(alignment: .leading) {
                         
                         IconTextField(icon: "person.fill", placeHolder: "Benutzername", text: $authVM.username)
+                        
                         Text(authVM.usernamePrompt).foregroundColor(.red).font(.system(size: 12)).padding(.leading, 20)
                         
-                        IconTextField(icon: "envelope.fill", placeHolder: "Email", text: $authVM.email)
-                            .padding(.top, 15)
+                        IconTextField(icon: "envelope.fill", placeHolder: "Email", text: $authVM.email).padding(.top, 15)
+                        
                         Text(authVM.emailPrompt).foregroundColor(.red).font(.system(size: 12)).padding(.leading, 20)
                         
-                        IconSecureField(icon: "lock.fill", placeHolder: "Passwort", text: $authVM.password)
-                            .padding(.top, 15)
+                        IconSecureField(icon: "lock.fill", placeHolder: "Passwort", text: $authVM.password).padding(.top, 15)
+                        
                         Text(authVM.passwordPrompt).foregroundColor(.red).font(.system(size: 12)).padding(.leading, 20)
                         
-                        IconSecureField(icon: "lock.fill", placeHolder: "Passwort bestätigen", text: $authVM.confirmPassword)
-                            .padding(.top, 15)
+                        IconSecureField(icon: "lock.fill", placeHolder: "Passwort bestätigen", text: $authVM.confirmPassword).padding(.top, 15)
+                        
                         Text(authVM.confirmPasswordPrompt).foregroundColor(.red).font(.system(size: 12)).padding(.leading, 20)
                         
+                        // MARK: - Reg Button
                         Button {
                             //TODO: implementation of the registration logic
                             print("signing up...")
@@ -45,16 +47,15 @@ struct RegistrationView: View {
                                 .cornerRadius(25)
                                 .foregroundColor(.white)
                         }
+                        .opacity(authVM.registrationInputsFilled ? 1.0 : 0.6)
+                        .disabled(!authVM.registrationInputsFilled)
                         .padding(.top, 30)
-                        
-                        
                     }
                     .padding(.leading, 38)
                     .padding(.trailing, 38)
                     .padding(.top, 38)
                     
-                    
-                    // MARK: - Footer
+                    // MARK: - Back to Login
                     VStack {
                         HStack {
                             Text("Du hast schon ein Account?")
@@ -71,11 +72,11 @@ struct RegistrationView: View {
                     }
                     .padding(10)
                 }
-                .onTapGesture {
-                    hideKeyboard()
-                }
             }
             .navigationBarHidden(true)
+        }
+        .onTapGesture {
+            hideKeyboard()
         }
     }
 }

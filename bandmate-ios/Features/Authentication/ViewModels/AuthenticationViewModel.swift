@@ -49,6 +49,21 @@ class AuthenticationViewModel: ObservableObject {
         }
     }
     
+    var loginInputsFilled: Bool {
+        if email.isEmpty || password.isEmpty {
+            return false
+        } else {
+            return true
+        }
+    }
+    
+    var registrationInputsFilled: Bool {
+        if username.isEmpty || email.isEmpty || password.isEmpty {
+            return false
+        } else {
+            return true
+        }
+    }
     // MARK: - Validation Methods
     
     /// Checks if a given username  is valid or not.
@@ -88,5 +103,6 @@ class AuthenticationViewModel: ObservableObject {
         }
         return false
     }
+    
     
 }
