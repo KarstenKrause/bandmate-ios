@@ -35,14 +35,25 @@ struct RegistrationView: View {
                         Button {
                             //TODO: implementation of the registration logic
                             print("signing up...")
-                            authVM.clearUserInputs()
+                            authVM.signUp()
                         } label: {
-                            Text("Registrieren")
-                                .frame(minWidth: 0, maxWidth: .infinity)
-                                .frame(height: 50)
-                                .background(Color(.blue))
-                                .cornerRadius(25)
-                                .foregroundColor(.white)
+                            if !authVM.isLoading {
+                                Text("Registrieren")
+                                    .frame(minWidth: 0, maxWidth: .infinity)
+                                    .frame(height: 50)
+                                    .background(Color(.blue))
+                                    .cornerRadius(25)
+                                    .foregroundColor(.white)
+                            } else {
+                                ProgressView()
+                                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                                    .frame(minWidth: 0, maxWidth: .infinity)
+                                    .frame(height: 50)
+                                    .background(Color(.blue))
+                                    .cornerRadius(25)
+                                    .foregroundColor(.white)
+                            }
+                            
                         }
                         .opacity(authVM.registrationInputsFilled ? 1.0 : 0.6)
                         .disabled(!authVM.registrationInputsFilled)

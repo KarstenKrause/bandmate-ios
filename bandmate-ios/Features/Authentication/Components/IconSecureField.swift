@@ -19,7 +19,7 @@ struct IconSecureField: View {
         }
         .padding()
         .background(Color("CustomPrimary"))
-        .mask(RoundedRectangle(cornerRadius: 25, style: .continuous)).frame(height: 50)
+        .mask(RoundedRectangle(cornerRadius: 25, style: .continuous)).frame(height: 55)
         .overlay(RoundedRectangle(cornerRadius: 25, style: .continuous).stroke().fill(.gray.opacity(0.4))).frame(height: 50)
     }
 }

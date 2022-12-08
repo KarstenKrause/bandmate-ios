@@ -15,6 +15,7 @@ class AuthenticationViewModel: ObservableObject {
     @Published var password: String = ""
     @Published var confirmPassword: String = ""
     @Published var errorMessage: String = ""
+    @Published var isLoading: Bool = false
     
     // MARK: - Computed Properties
     var usernamePrompt: String {
@@ -58,7 +59,7 @@ class AuthenticationViewModel: ObservableObject {
     }
     
     var registrationInputsFilled: Bool {
-        if username.isEmpty || email.isEmpty || password.isEmpty {
+        if email.isEmpty || password.isEmpty || confirmPassword.isEmpty {
             return false
         } else {
             return true
@@ -104,7 +105,28 @@ class AuthenticationViewModel: ObservableObject {
         return false
     }
     
-    func clearUserInputs() -> Void {
+    func signIn() {
+        isLoading = true
+        
+        // TODO: Replacing the Timer with the actual database login method
+        Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { timer in
+            self.isLoading = false
+            self.clearUserInputs()
+        }
+    }
+    
+    func signUp() {
+        isLoading = true
+        
+        // TODO: Replacing the Timer with the actual database registration method
+        Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { timer in
+            self.isLoading = false
+            self.clearUserInputs()
+        }
+    }
+    
+    /// Clears all filled user inputs
+    func clearUserInputs() {
         self.username = ""
         self.email = ""
         self.password = ""

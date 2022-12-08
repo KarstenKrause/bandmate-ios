@@ -41,14 +41,25 @@ struct LoginView: View {
                         Button {
                             //TODO: implementation of the login logic
                             print("login...")
-                            authVM.clearUserInputs()
+                            authVM.signIn()
                         } label: {
-                            Text("Anmelden")
-                                .frame(minWidth: 0, maxWidth: .infinity)
-                                .frame(height: 50)
-                                .background(Color(.blue))
-                                .cornerRadius(25)
-                                .foregroundColor(.white)
+                            if !authVM.isLoading {
+                                Text("Anmelden")
+                                    .frame(minWidth: 0, maxWidth: .infinity)
+                                    .frame(height: 50)
+                                    .background(Color(.blue))
+                                    .cornerRadius(25)
+                                    .foregroundColor(.white)
+                            } else {
+                                ProgressView()
+                                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                                    .frame(minWidth: 0, maxWidth: .infinity)
+                                    .frame(height: 50)
+                                    .background(Color(.blue))
+                                    .cornerRadius(25)
+                                    .foregroundColor(.white)
+                            }
+                            
                         }
                         .opacity(authVM.loginInputsFilled ? 1.0 : 0.6)
                         .disabled(!authVM.loginInputsFilled)
@@ -59,6 +70,7 @@ struct LoginView: View {
                         
                     }
                     .padding(38)
+                    
                     Spacer()
                     
                     // MARK: - Reg Buttons
