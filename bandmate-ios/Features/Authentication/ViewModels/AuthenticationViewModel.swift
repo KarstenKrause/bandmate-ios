@@ -104,5 +104,12 @@ class AuthenticationViewModel: ObservableObject {
         return false
     }
     
+    func clearUserInputs() -> Void {
+        self.username = ""
+        self.email = ""
+        self.password = ""
+        self.confirmPassword = ""
+    }
+    
     
 }

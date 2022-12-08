@@ -19,10 +19,6 @@ struct RegistrationView: View {
                     // MARK: Inputs
                     VStack(alignment: .leading) {
                         
-                        IconTextField(icon: "person.fill", placeHolder: "Benutzername", text: $authVM.username)
-                        
-                        Text(authVM.usernamePrompt).foregroundColor(.red).font(.system(size: 12)).padding(.leading, 20)
-                        
                         IconTextField(icon: "envelope.fill", placeHolder: "Email", text: $authVM.email).padding(.top, 15)
                         
                         Text(authVM.emailPrompt).foregroundColor(.red).font(.system(size: 12)).padding(.leading, 20)
@@ -39,6 +35,7 @@ struct RegistrationView: View {
                         Button {
                             //TODO: implementation of the registration logic
                             print("signing up...")
+                            authVM.clearUserInputs()
                         } label: {
                             Text("Registrieren")
                                 .frame(minWidth: 0, maxWidth: .infinity)

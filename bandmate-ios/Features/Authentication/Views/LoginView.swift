@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
     @EnvironmentObject var authVM: AuthenticationViewModel
+    @State private var showRegistrationSheet = false
     
     var body: some View {
         GeometryReader { geo in
@@ -39,7 +40,8 @@ struct LoginView: View {
                         
                         Button {
                             //TODO: implementation of the login logic
-                            print("login")
+                            print("login...")
+                            authVM.clearUserInputs()
                         } label: {
                             Text("Anmelden")
                                 .frame(minWidth: 0, maxWidth: .infinity)
@@ -77,8 +79,8 @@ struct LoginView: View {
                         Text("Registrieren mit Email, Apple oder Google").font(.system(size:12)).foregroundColor(.gray).padding(.bottom, 10)
                         
                         HStack {
-                            NavigationLink {
-                                RegistrationView()
+                            Button {
+                                showRegistrationSheet.toggle()
                             } label: {
                                 Image(systemName: "envelope")
                                     .resizable()
@@ -86,6 +88,10 @@ struct LoginView: View {
                                     .frame(width: 32.0, height: 32.0)
                                     .foregroundColor(Color(.gray))
                             }
+                            .sheet(isPresented: $showRegistrationSheet) {
+                                RegistrationView()
+                            }
+
                             
                             Spacer()
                             
