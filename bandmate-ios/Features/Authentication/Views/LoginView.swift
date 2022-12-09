@@ -102,6 +102,8 @@ struct LoginView: View {
                             }
                             .sheet(isPresented: $showRegistrationSheet) {
                                 RegistrationView()
+                                    .presentationDetents([.fraction(0.77)])
+                                    .presentationDragIndicator(.visible)
                             }
 
                             

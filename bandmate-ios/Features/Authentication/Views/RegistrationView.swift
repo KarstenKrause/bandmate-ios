@@ -56,7 +56,7 @@ struct RegistrationView: View {
                             
                         }
                         .opacity(authVM.registrationInputsFilled ? 1.0 : 0.6)
-                        .disabled(!authVM.registrationInputsFilled)
+                        .disabled(!authVM.registrationValid())
                         .padding(.top, 30)
                     }
                     .padding(.leading, 38)

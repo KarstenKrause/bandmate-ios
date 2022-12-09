@@ -98,7 +98,7 @@ class AuthenticationViewModel: ObservableObject {
     
     /// Checks whether all registration entries are valid and complete.
     /// - Returns: True if all entries are valid.
-    func registrationComplete() -> Bool {
+    func registrationValid() -> Bool {
         if passwordsMatch() && passwordValid() && emailValid() && usernameValid() {
             return true
         }
