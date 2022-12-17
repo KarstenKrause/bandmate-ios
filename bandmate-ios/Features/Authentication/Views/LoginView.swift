@@ -11,6 +11,34 @@ struct LoginView: View {
     @EnvironmentObject var authVM: AuthenticationViewModel
     @State private var showRegistrationSheet = false
     
+    private var loginButton: some View {
+        Button {
+            //TODO: implementation of the login logic
+            print("login...")
+            authVM.signIn()
+        } label: {
+            if !authVM.isLoading {
+                Text("Anmelden")
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .frame(height: 50)
+                    .background(Color(.blue))
+                    .cornerRadius(25)
+                    .foregroundColor(.white)
+            } else {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .frame(height: 50)
+                    .background(Color(.blue))
+                    .cornerRadius(25)
+                    .foregroundColor(.white)
+            }
+            
+        }
+        .opacity(authVM.loginInputsFilled ? 1.0 : 0.6)
+        .disabled(!authVM.loginInputsFilled)
+    }
+    
     var body: some View {
         GeometryReader { geo in
             NavigationView {
@@ -37,32 +65,7 @@ struct LoginView: View {
                         
                         IconTextField(icon: "envelope.fill", placeHolder: "Email", text: $authVM.email)
                         IconSecureField(icon: "lock.fill", placeHolder: "Passwort", text: $authVM.password)
-                        
-                        Button {
-                            //TODO: implementation of the login logic
-                            print("login...")
-                            authVM.signIn()
-                        } label: {
-                            if !authVM.isLoading {
-                                Text("Anmelden")
-                                    .frame(minWidth: 0, maxWidth: .infinity)
-                                    .frame(height: 50)
-                                    .background(Color(.blue))
-                                    .cornerRadius(25)
-                                    .foregroundColor(.white)
-                            } else {
-                                ProgressView()
-                                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
-                                    .frame(minWidth: 0, maxWidth: .infinity)
-                                    .frame(height: 50)
-                                    .background(Color(.blue))
-                                    .cornerRadius(25)
-                                    .foregroundColor(.white)
-                            }
-                            
-                        }
-                        .opacity(authVM.loginInputsFilled ? 1.0 : 0.6)
-                        .disabled(!authVM.loginInputsFilled)
+                        loginButton
                         
                         Text(authVM.errorMessage)
                             .foregroundColor(.red)
@@ -91,8 +94,9 @@ struct LoginView: View {
                         Text("Registrieren mit Email, Apple oder Google").font(.system(size:12)).foregroundColor(.gray).padding(.bottom, 10)
                         
                         HStack {
+
                             Button {
-                                showRegistrationSheet.toggle()
+                                toggleRegistrationSheet()
                             } label: {
                                 Image(systemName: "envelope")
                                     .resizable()
@@ -106,7 +110,6 @@ struct LoginView: View {
                                     .presentationDragIndicator(.visible)
                             }
 
-                            
                             Spacer()
                             
                             Button {
@@ -140,6 +143,10 @@ struct LoginView: View {
         .onTapGesture {
             hideKeyboard()
         }
+    }
+    
+    func toggleRegistrationSheet() {
+        showRegistrationSheet.toggle()
     }
 }
 

@@ -11,6 +11,34 @@ struct RegistrationView: View {
     @EnvironmentObject var authVM: AuthenticationViewModel
     @Environment(\.presentationMode) var presentationMode
     
+    private var signupButton: some View {
+        Button {
+            //TODO: implementation of the registration logic
+            print("signing up...")
+            authVM.signUp()
+        } label: {
+            if !authVM.isLoading {
+                Text("Registrieren")
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .frame(height: 50)
+                    .background(Color(.blue))
+                    .cornerRadius(25)
+                    .foregroundColor(.white)
+            } else {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .frame(height: 50)
+                    .background(Color(.blue))
+                    .cornerRadius(25)
+                    .foregroundColor(.white)
+            }
+        }
+        .opacity(authVM.registrationInputsFilled ? 1.0 : 0.6)
+        .disabled(!authVM.registrationValid())
+        .padding(.top, 30)
+    }
+    
     var body: some View {
         GeometryReader { geo in
             NavigationView {
@@ -19,45 +47,31 @@ struct RegistrationView: View {
                     // MARK: Inputs
                     VStack(alignment: .leading) {
                         
-                        IconTextField(icon: "envelope.fill", placeHolder: "Email", text: $authVM.email).padding(.top, 15)
+                        IconTextField(icon: "envelope.fill", placeHolder: "Email", text: $authVM.email)
+                            .padding(.top, 15)
                         
-                        Text(authVM.emailPrompt).foregroundColor(.red).font(.system(size: 12)).padding(.leading, 20)
+                        Text(authVM.emailPrompt)
+                            .foregroundColor(.red)
+                            .font(.system(size: 12))
+                            .padding(.leading, 20)
                         
-                        IconSecureField(icon: "lock.fill", placeHolder: "Passwort", text: $authVM.password).padding(.top, 15)
+                        IconSecureField(icon: "lock.fill", placeHolder: "Passwort", text: $authVM.password)
+                            .padding(.top, 15)
                         
-                        Text(authVM.passwordPrompt).foregroundColor(.red).font(.system(size: 12)).padding(.leading, 20)
+                        Text(authVM.passwordPrompt)
+                            .foregroundColor(.red)
+                            .font(.system(size: 12))
+                            .padding(.leading, 20)
                         
-                        IconSecureField(icon: "lock.fill", placeHolder: "Passwort bestätigen", text: $authVM.confirmPassword).padding(.top, 15)
+                        IconSecureField(icon: "lock.fill", placeHolder: "Passwort bestätigen", text: $authVM.confirmPassword)
+                            .padding(.top, 15)
                         
-                        Text(authVM.confirmPasswordPrompt).foregroundColor(.red).font(.system(size: 12)).padding(.leading, 20)
+                        Text(authVM.confirmPasswordPrompt)
+                            .foregroundColor(.red)
+                            .font(.system(size: 12))
+                            .padding(.leading, 20)
                         
-                        // MARK: - Reg Button
-                        Button {
-                            //TODO: implementation of the registration logic
-                            print("signing up...")
-                            authVM.signUp()
-                        } label: {
-                            if !authVM.isLoading {
-                                Text("Registrieren")
-                                    .frame(minWidth: 0, maxWidth: .infinity)
-                                    .frame(height: 50)
-                                    .background(Color(.blue))
-                                    .cornerRadius(25)
-                                    .foregroundColor(.white)
-                            } else {
-                                ProgressView()
-                                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
-                                    .frame(minWidth: 0, maxWidth: .infinity)
-                                    .frame(height: 50)
-                                    .background(Color(.blue))
-                                    .cornerRadius(25)
-                                    .foregroundColor(.white)
-                            }
-                            
-                        }
-                        .opacity(authVM.registrationInputsFilled ? 1.0 : 0.6)
-                        .disabled(!authVM.registrationValid())
-                        .padding(.top, 30)
+                        signupButton
                     }
                     .padding(.leading, 38)
                     .padding(.trailing, 38)
@@ -69,7 +83,7 @@ struct RegistrationView: View {
                             Text("Du hast schon ein Account?")
                             .font(.footnote)
                             Button {
-                                presentationMode.wrappedValue.dismiss()
+                                self.dismiss()
                             } label: {
                                 Text("Anmelden")
                                     .font(.footnote)
@@ -86,6 +100,10 @@ struct RegistrationView: View {
         .onTapGesture {
             hideKeyboard()
         }
+    }
+    
+    func dismiss() {
+        presentationMode.wrappedValue.dismiss()
     }
 }
 
