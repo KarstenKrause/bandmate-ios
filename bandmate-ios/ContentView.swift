@@ -9,8 +9,8 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-   
     @EnvironmentObject var authVM: AuthenticationViewModel
+    
     var body: some View {
         NavigationView {
             LoginView()

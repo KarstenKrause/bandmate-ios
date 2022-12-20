@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D48BC312940F94000BC7957 /* GlobalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D48BC302940F94000BC7957 /* GlobalExtensions.swift */; };
+		3D4F72812951F57C0067820C /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F72802951F57C0067820C /* SubmitButton.swift */; };
 		3D603B2029216D39000ECCEF /* bandmate_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D603B1F29216D39000ECCEF /* bandmate_iosApp.swift */; };
 		3D603B2229216D39000ECCEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D603B2129216D39000ECCEF /* ContentView.swift */; };
 		3D603B2429216D3A000ECCEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D603B2329216D3A000ECCEF /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		3D48BC302940F94000BC7957 /* GlobalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalExtensions.swift; sourceTree = "<group>"; };
+		3D4F72802951F57C0067820C /* SubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitButton.swift; sourceTree = "<group>"; };
 		3D603B1C29216D39000ECCEF /* bandmate-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bandmate-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D603B1F29216D39000ECCEF /* bandmate_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bandmate_iosApp.swift; sourceTree = "<group>"; };
 		3D603B2129216D39000ECCEF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 			children = (
 				3DE82A9E29256166000615F0 /* IconTextField.swift */,
 				3DE82AA0292562B1000615F0 /* IconSecureField.swift */,
+				3D4F72802951F57C0067820C /* SubmitButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				3DA84E8129225E29000DAB9C /* AuthenticationViewModel.swift in Sources */,
 				3D603B2929216D3A000ECCEF /* Persistence.swift in Sources */,
 				3DE82A9F29256166000615F0 /* IconTextField.swift in Sources */,
+				3D4F72812951F57C0067820C /* SubmitButton.swift in Sources */,
 				3DE82AA3293C57B4000615F0 /* RegistrationView.swift in Sources */,
 				3D48BC312940F94000BC7957 /* GlobalExtensions.swift in Sources */,
 				3D603B2229216D39000ECCEF /* ContentView.swift in Sources */,

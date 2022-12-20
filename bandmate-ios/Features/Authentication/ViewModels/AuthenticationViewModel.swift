@@ -98,8 +98,15 @@ class AuthenticationViewModel: ObservableObject {
     
     /// Checks whether all registration entries are valid and complete.
     /// - Returns: True if all entries are valid.
-    func registrationValid() -> Bool {
-        if passwordsMatch() && passwordValid() && emailValid() && usernameValid() {
+    func registrationFormValid() -> Bool {
+        if passwordsMatch() && passwordValid() && emailValid() {
+            return true
+        }
+        return false
+    }
+    
+    func loginFormValid() -> Bool {
+        if passwordsMatch() && emailValid() {
             return true
         }
         return false
@@ -109,7 +116,7 @@ class AuthenticationViewModel: ObservableObject {
         isLoading = true
         
         // TODO: Replacing the Timer with the actual database login method
-        Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { timer in
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { timer in
             self.isLoading = false
             self.clearUserInputs()
         }
@@ -119,7 +126,7 @@ class AuthenticationViewModel: ObservableObject {
         isLoading = true
         
         // TODO: Replacing the Timer with the actual database registration method
-        Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { timer in
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { timer in
             self.isLoading = false
             self.clearUserInputs()
         }

@@ -10,41 +10,14 @@ import SwiftUI
 struct LoginView: View {
     @EnvironmentObject var authVM: AuthenticationViewModel
     @State private var showRegistrationSheet = false
-    
-    private var loginButton: some View {
-        Button {
-            //TODO: implementation of the login logic
-            print("login...")
-            authVM.signIn()
-        } label: {
-            if !authVM.isLoading {
-                Text("Anmelden")
-                    .frame(minWidth: 0, maxWidth: .infinity)
-                    .frame(height: 50)
-                    .background(Color(.blue))
-                    .cornerRadius(25)
-                    .foregroundColor(.white)
-            } else {
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
-                    .frame(minWidth: 0, maxWidth: .infinity)
-                    .frame(height: 50)
-                    .background(Color(.blue))
-                    .cornerRadius(25)
-                    .foregroundColor(.white)
-            }
-            
-        }
-        .opacity(authVM.loginInputsFilled ? 1.0 : 0.6)
-        .disabled(!authVM.loginInputsFilled)
-    }
-    
+
+    // MARK: body
     var body: some View {
         GeometryReader { geo in
             NavigationView {
                 VStack {
                     
-                    // MARK: - Header
+                    // MARK:  Header
                     VStack {
                         Text("Bandmate")
                             .font(.title)
@@ -60,12 +33,25 @@ struct LoginView: View {
                     .background(Color.blue)
                     .ignoresSafeArea()
                     
-                    // MARK: - Inputs
-                    VStack(spacing: 24) {
-                        
+                    // MARK: Form
+                    VStack(alignment: .leading) {
                         IconTextField(icon: "envelope.fill", placeHolder: "Email", text: $authVM.email)
+                            
+                        Text(authVM.emailPrompt)
+                            .foregroundColor(.red)
+                            .font(.system(size: 12))
+                            .padding(.leading, 20)
+                        
                         IconSecureField(icon: "lock.fill", placeHolder: "Passwort", text: $authVM.password)
-                        loginButton
+                            .padding(.top, 15)
+                        
+                        Text(authVM.passwordPrompt)
+                            .foregroundColor(.red)
+                            .font(.system(size: 12))
+                            .padding(.leading, 20)
+                        
+                        LoginButton()
+                            .padding(.top, 15)
                         
                         Text(authVM.errorMessage)
                             .foregroundColor(.red)
@@ -76,9 +62,8 @@ struct LoginView: View {
                     
                     Spacer()
                     
-                    // MARK: - Reg Buttons
+                    // MARK:  Registration Buttons
                     VStack {
-                        
                         HStack {
                             VStack {
                                 Divider()
@@ -94,7 +79,6 @@ struct LoginView: View {
                         Text("Registrieren mit Email, Apple oder Google").font(.system(size:12)).foregroundColor(.gray).padding(.bottom, 10)
                         
                         HStack {
-
                             Button {
                                 toggleRegistrationSheet()
                             } label: {
@@ -145,11 +129,25 @@ struct LoginView: View {
         }
     }
     
-    func toggleRegistrationSheet() {
+    // MARK: - Methods
+    
+    private func toggleRegistrationSheet() {
         showRegistrationSheet.toggle()
+    }
+    
+    // MARK: Login Button
+    private func LoginButton() -> some View {
+        SubmitButton(isLoading: authVM.isLoading, buttonText: "Anmelden", action: {
+            //TODO: implementation of the login logic
+            print("login...")
+            authVM.signIn()
+        })
+        .opacity(authVM.loginInputsFilled ? 1.0 : 0.6)
+        .disabled(!authVM.loginFormValid())
     }
 }
 
+// MARK: Preview Provider
 struct LoginView_Previews: PreviewProvider {
     static let previewAuthVM = AuthenticationViewModel()
     static var previews: some View {

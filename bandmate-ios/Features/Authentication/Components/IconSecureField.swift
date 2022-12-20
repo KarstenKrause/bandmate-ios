@@ -11,12 +11,34 @@ struct IconSecureField: View {
     let icon: String
     let placeHolder: String
     @Binding var text: String
+    @State private var showPassword: Bool = false
+    
+   
     
     var body: some View {
         HStack {
-            Image(systemName: self.icon).foregroundColor(.gray)
-            SecureField(self.placeHolder, text: $text)
-                .keyboardType(.emailAddress)
+            Image(systemName: self.icon)
+                .foregroundColor(.gray)
+            
+            if showPassword {
+                 TextField(self.placeHolder, text: $text).keyboardType(.emailAddress)
+            } else {
+                 SecureField(self.placeHolder, text: $text)
+                        .keyboardType(.emailAddress)
+            }
+            Button {
+                toggleShowPassword()
+            } label: {
+                if showPassword {
+                    Image(systemName: "eye.fill")
+                        .foregroundColor(.primary)
+                } else {
+                    Image(systemName: "eye")
+                        .foregroundColor(.gray)
+                }
+                
+            }
+
         }
         .padding()
         .background(Color("CustomPrimary"))
@@ -26,6 +48,10 @@ struct IconSecureField: View {
         .stroke()
         .fill(.gray.opacity(0.4)))
         .frame(height: 50)
+    }
+    
+    func toggleShowPassword() {
+        showPassword.toggle()
     }
 }
 
